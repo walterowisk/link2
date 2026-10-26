@@ -150,7 +150,9 @@ export function ProfileView({
 
   return (
     <div
-      className={`min-h-full w-full flex flex-col items-center justify-start py-8 px-4 sm:px-6 relative selection:bg-indigo-500 selection:text-white ${
+      className={`${
+        isPreview ? "min-h-full" : "min-h-screen"
+      } w-full flex-1 flex flex-col items-center justify-between py-10 px-4 sm:px-6 relative selection:bg-indigo-500 selection:text-white ${
         bgProps.className || ""
       } ${fontClass}`}
       style={bgProps.style}
@@ -168,7 +170,7 @@ export function ProfileView({
       )}
 
       {/* Conteúdo Centralizado */}
-      <div className="w-full max-w-md flex flex-col items-center text-center space-y-6 animate-in fade-in duration-300">
+      <div className="w-full max-w-md flex flex-col items-center text-center space-y-6 animate-in fade-in duration-300 my-auto">
         {/* Foto de Perfil */}
         <div className="relative group">
           <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-xl overflow-hidden">

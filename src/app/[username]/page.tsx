@@ -124,10 +124,10 @@ async function ProfileLoader({ params }: PageProps) {
 
 export default function PublicProfilePage(props: PageProps) {
   return (
-    <main className="min-h-screen w-full flex items-center justify-center bg-slate-950">
+    <main className="min-h-screen w-full flex flex-col flex-1">
       <Suspense
         fallback={
-          <div className="flex flex-col items-center justify-center p-8 space-y-4">
+          <div className="min-h-screen w-full flex flex-col items-center justify-center p-8 space-y-4 bg-slate-950">
             <div className="w-24 h-24 rounded-full bg-zinc-800 animate-pulse" />
             <div className="w-32 h-6 bg-zinc-800 rounded-lg animate-pulse" />
             <div className="w-48 h-4 bg-zinc-800 rounded-lg animate-pulse" />
